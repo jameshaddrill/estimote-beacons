@@ -1,0 +1,66 @@
+
+html, body {
+  font-family: 'Open Sans';
+}
+
+.myGuide {
+    background: #fff;
+    width: 80%;
+    margin: 20px auto 0;
+    padding: 30px;
+}
+
+.myGuide li{ 
+  list-style-type:none;
+  border-left: 3px solid blue;
+  padding-left: 20px;
+  padding-bottom:30px;
+  line-height:10px;
+  position:relative;
+  font-size: 30px;
+
+  font-weight: bold;
+}
+.myGuide li .time{ 
+  font-size: 15px;
+  line-height: 30px;
+}
+.myGuide li .indicator{
+  position:absolute;
+  left:-10px;
+  display:block;
+  width: 40px;
+  height:30px;
+  background: url(../images/circle2.png) no-repeat;
+  background-size: 20px auto;
+  
+  top: 5px;
+}
+
+
+.myGuide li.active .indicator {
+  background: url(../images/tick.png) no-repeat;
+   background-size: 20px auto;
+   
+}
+
+.general-info li {
+  list-style: none;
+  width: 46%;
+  margin: 10px 1%;
+  float: left;
+  height:100px;
+}
+
+.general-info li img {
+  width:auto;
+  height:100%;
+}
+
+#flightInfo img.info, .info {
+  display: block;
+  background-color: #fff;
+  width: 100%;
+  max-width: 80%;
+  margin: 15px auto; 
+}

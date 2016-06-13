@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no,
+		shrink-to-fit=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+
+	<title>Estimote Beacons</title>
+
+	<!-- <style>
+	i love meat
+		@import 'ui/css/evothings-app.css';
+	</style> -->
+	<!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template --> 
+    <link href="css/app.css" rel="stylesheet">
+    <link href="css/app2.css" rel="stylesheet">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+	<script>
+	// Redirect console.log to Evothings Workbench.
+	if (window.hyper && window.hyper.log) { console.log = hyper.log }
+	</script>
+
+	<script src="cordova.js"></script>
+	<script src="libs/jquery/jquery.js"></script>
+	<script src="libs/evothings/evothings.js"></script>
+	<script src="libs/evothings/ui/ui.js"></script>
+	<script src="app.js"></script>
+
+</head>
+
+<body>
+
+	 <body>
+      <div class="pull-right nav-toggle">
+            <button type="button" class="btn btn-primary" data-toggle="offcanvas">Toggle nav</button>
+          </div> 
+    <div class="container">
+      <div class="row row-offcanvas row-offcanvas-right">
+
+        <div class="col-xs-12 col-sm-12">
+ 
+          <div class="row">
+            <div id="pane-1" class= "col-xs-12 pane active">
+              <img class="home-logo" src="img/logo.png"/> 
+              <h1>Welcome to Shepard! </h1>
+              <p>your travel buddy.</p>
+                <form>
+                <div class="sign-up-feilds">
+                  <input name="name" type="text" placeholder="name"/>
+                  <input name="email" type="text" placeholder="email"/>
+                </div>
+                  <a class="sign-up-button js-nav-link btn btn-primary" href="#pane-2">SIGN UP</a>
+                </form>
+
+            </div>
+            <div id="pane-2" class= "col-xs-12 pane">
+              <img class="home-logo" src="img/logo.png"/> 
+              <h1>Hi Jim</h1>              
+               <p>Enter your flight number to get started</p>
+
+               <form class="flight-number">
+                  <input type="text" placeholder="Flight Number"/>
+                </form>
+                 <a class="js-nav-link btn btn-primary sign-up-button" href="#pane-3">SUBMIT</a>
+
+            </div>
+            <div id="pane-3" class= "col-xs-12 pane">
+              <img class="home-logo" src="img/logo.png"/> 
+
+              <h1>Hi Jim</h1>              
+               <p>Your next flight is</p>
+               <img class="info" src="images/flightinfo2.png" /> 
+              
+
+            </div>
+            <div id="pane-4" class= "col-xs-12 pane info-pane">
+             <a class="js-nav-link close" href="#myGuide" data-update-timeline="checkpoint-1">
+               <img src="img/x.png"/>
+             </a>
+                <h1>Hi Jim</h1>              
+                <p>Welcome to Heathrow</p>
+                <p>go to check in <span class="big"> Desk 5</span></p>
+
+            </div>
+            <div id="pane-5" class= "col-xs-12 pane info-pane">
+             <a class="js-nav-link close" href="#myGuide" data-update-timeline="checkpoint-1">
+               <img src="img/x.png"/>
+             </a>
+                <h1>You are approaching Security</h1>              
+                <p>have your <span class="big">passport</span> ready</p>
+
+            </div>
+            <div id="pane-6" class= "col-xs-12 pane info-pane">
+             <a class="js-nav-link close" href="#myGuide" data-update-timeline="checkpoint-1">
+               <img src="img/x.png"/>
+             </a>
+                <h1>You have arrived at your Gate</h1>              
+                <p>Relax and<span class="big">enjoy</span> your flight</p>
+               
+            </div>
+
+
+            <div id="myGuide" class= "col-xs-12 pane">
+            	<img class="home-logo" src="img/logo.png"/> 
+               	<h1>Progress</h1>
+               	<ul class="myGuide">
+                 <li id="checkpoint-1" class="active"><span class="indicator"></span><span class="time">11.00</span> <span><a href="#pane-4">Go to check in gate</a></span></li>
+                 <li id="checkpoint-2"><span class="indicator"></span><span class="time">11.30</span> <span><a class="js-nav-link" href="#pane-5">Arrive at Security</a></span></li>
+                 <li id="checkpoint-3"><span class="indicator"></span><span class="time">12.30</span> <span><a class="js-nav-link" href="#pane-6">Find your gate</a></span></li>
+                </ul>
+            </div>            
+            <div id="flightInfo" class= "col-xs-12 pane">
+            	<img class="home-logo" src="img/logo.png"/> 
+               <h1>Flight Info</h1>
+               <img  class="info" src="images/flightinfo2.png" />
+            </div> 
+            <div id="info" class= "col-xs-12 pane">
+            <img class="home-logo" src="img/logo.png"/> 
+               <h1>Around you</h1>
+               <ul class="general-info">
+               		<li><img class="" src="images/toilet.png" /></li>
+               		<li><img class="" src="images/food.png" /></li>
+               		<li><img class="" src="images/info.png" /></li>
+               		<li><img class="" src="images/dutyfree.png" /></li>
+               		<li><img class="" src="images/map.png" /></li>
+               </ul>
+            </div>
+          </div>
+
+        </div><!--End content container-->
+
+        <div class="col-xs-12 sidebar-offcanvas" id="sidebar">
+          <div class="list-group">
+            <a href="#pane-1" class="js-nav-link list-group-item active">Home</a>
+            <a href="#pane-2" class="js-nav-link list-group-item">Link</a>
+            <a href="#pane-3" class="js-nav-link list-group-item">Link</a>
+            <a href="#pane-4" class="js-nav-link list-group-item">Link</a>
+            <a href="#pane-5" class="js-nav-link list-group-item">Link</a>
+            <a href="#pane-6" class="js-nav-link list-group-item">Link</a>
+          </div>
+        </div><!--/.sidebar-offcanvas-->
+      </div><!--/row-->
+    </div><!--/.container-->
+     <div class ="footer">
+        <a href="#myGuide" class="js-nav-link col-xs-4">My <br/>Guide</a>
+        <a href="#flightInfo" class="js-nav-link col-xs-4">Flight Info</a>
+        <a href="#info" class="js-nav-link col-xs-4">General Info</a>
+    </div>
+	<!-- <h1>Estimote Beacons test test</h1>
+	<div id="closest-beacon">
+
+	</div>
+	<p>Demo of ranging for Estimote Beacons. Works with all factory configured beacons.</p>
+
+
+	<ul id="found-beacons" class="dynamic"></ul> -->
+
+</body>
+
+</html>
